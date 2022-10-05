@@ -339,3 +339,69 @@ cursor: pointer;
     position: absolute;
     bottom: 0;
 }
+
+/* 4th section style starts */
+.choices
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 20px;
+    margin: auto;
+}
+
+.aim-item 
+{
+    padding: 50px;
+}
+.aim-item:nth-child(1) h1
+{
+  font-size: 50px;
+}
+.aim-item:nth-child(2) h1
+{
+    font-size: 40px;
+}
+.aim-item:nth-child(3) h1
+{
+    font-size: 50px;
+}
+
+
+/* choose you style section */
+
+.choose-items
+{
+    display: flex;
+    width: 100%;
+    color: white;
+background-color: black;
+}
+.choose-item:nth-child(2)
+{
+width:33.33%;
+background-color: black;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.small-text
+{
+    font-size: 24px;
+}
+.medium-text
+{
+    font-size: 34px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.big-text
+{
+    font-size: 40px;
+}
+.choose-btn
+{
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 15px;
+}
