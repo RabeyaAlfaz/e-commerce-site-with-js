@@ -80,57 +80,60 @@ const products = [
 
 // Details to be changed on click 
 
+const wrapper = document.querySelector('.slider-wrapper');
+
+const links = document.querySelector  ('.bottom-item');
+
 const productImg = document.querySelector('.product-img');
-
 const productName = document.querySelector('.product-name');
-
 const productPrice = document.querySelector('.product-price');
 
-const sneakerColor = document.querySelectorAll('.color');
+const colors = document.querySelectorAll('.color');
+const sizes = document.querySelectorAll('.size');
 
-
-
-const wrapper = document.querySelector('.slider-wrapper');
-const navItems = document.querySelectorAll('.bottom-item');
-console.log(navItems);
-
-
-navItems.forEach((item,index) => {
-    item.addEventListener('click', ()=>{
-        // console.log(item,index);
-
-        // slide change
-       wrapper.style.transform = `translatex(${-100*index}vw)`;
-
-    //    change selected product 
-       const choosenProduct = products[index];
-      productImg.src=choosenProduct.colors[0].img;
-      productName.textContent = choosenProduct.title;
-      productPrice.textContent = choosenProduct.price;
-
-    //   change color 
-    
-    console.log(sneakerColor);
-    sneakerColor.forEach((color,index) => {
-      color.addEventListener('click',()=>
-      {
-        productImg.src=choosenProduct.colors[index].img;
-      })
-    });
-
-    
-
-    })
-    
+sizes.forEach((size,index)=>{
+  size.addEventListener('click',()=>{
+sizes.forEach((size)=>{
+  size.style.backgroundColor = "white";
+  size.style.color = "black";
 });
-
-const modalShow = document.querySelector('.person-info');
-const buyBtn= document.querySelector('.product-buy-btn');
-const crossIcon= document.querySelector('.cross-icon');
-
-buyBtn.addEventListener('click',()=>{
-  modalShow.style.display = "block";
+size.style.backgroundColor = "black";
+size.style.color = "white";
+  })
 })
-crossIcon.addEventListener('click',()=>{
-  modalShow.style.display = "none";
+
+// sizes.forEach((size,index)=>
+// {
+//   size.addEventListener('click',()=>{
+//    sizes.forEach((size)=>{
+//     size.style.backgroundColor = "white";
+//     size.style.color = "black";
+//    });
+//    size.style.backgroundColor = "black";
+//    size.style.color = "white";
+//   })
+// })
+
+
+
+
+links.forEach((link,index)=>{
+  link.addEventListener('click',()=>
+  {
+    console.log(link,index);
+    wrapper.style.transform = `translateX(${-100*index}vw)`;
+
+    const choosenProduct = products[index]; 
+    productName.textContent = choosenProduct.title;
+    productPrice.textContent = choosenProduct.price;
+    productImg.src = choosenProduct.colors[0].img;
+
+    colors.forEach((color,index)=>{
+      color.style.backgroundColor = choosenProduct.colors[index].code;
+color.addEventListener('click',()=>{
+productImg.src= choosenProduct.colors[index].img;
+})
+    })
+
+  })
 })
