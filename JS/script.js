@@ -82,7 +82,7 @@ const products = [
 
 const wrapper = document.querySelector('.slider-wrapper');
 
-const links = document.querySelector  ('.bottom-item');
+const links = document.querySelectorAll('.bottom-item');
 
 const productImg = document.querySelector('.product-img');
 const productName = document.querySelector('.product-name');

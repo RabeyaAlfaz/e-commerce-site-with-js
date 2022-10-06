@@ -4,6 +4,15 @@
     padding: 0;
 }
 
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    .search-field{
+display: none;
+    }
+    .search-icon{
+        display: none;
+    }
+}
 /* Nav bar styles  */
 nav
 {
